@@ -23,12 +23,6 @@ User can access Infotiv Car Rental Service
     [Tags]                  Test ladda in sida
     Go to Web Page
 
-User test negativ
-    [Documentation]         Skriva in negativ tom textbox, Ska ej logga in EXPECT FAIL
-    [Tags]                  Textbox tom
-    Go to Web Page
-    Login User No Password
-
 Select date
     [Documentation]         Väljer startdatum och slutdatum
     [Tags]                  DateSelector
