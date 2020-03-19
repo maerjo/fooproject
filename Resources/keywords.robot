@@ -86,6 +86,7 @@ User Input Cancel
     Click Button            id:cancel
 
 End Web Test
+    Unbook all cars if they exist
     Close Browser
 
 Unbook all cars if they exist
