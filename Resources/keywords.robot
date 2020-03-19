@@ -87,3 +87,9 @@ User Input Cancel
 
 End Web Test
     Close Browser
+
+Unbook all cars if they exist
+        ${no_of_booked_cars}=     Get Element Count     xpath://*[@id="middlepane"]/table/tbody/tr
+        LOG TO CONSOLE   no_of_booked_cars ${no_of_booked_cars}
+        :FOR  ${iteration}  IN RANGE      1        (${no_of_booked_cars})
+        \     Unbook car

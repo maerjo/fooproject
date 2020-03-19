@@ -59,6 +59,7 @@ Length CreditCardNumber
     ${AntalSiffror} =               Get Length  ${kreditkort}
     Log                             ${AntalSiffror}
     Should Be Equal As Integers     ${AntalSiffror}     16
+    Unbook all cars if they exist
 
 Cancel test at Creditcard Page
     [Documentation]         Below is a Cancel button, that will take the user back to the car selection page.
@@ -69,3 +70,4 @@ Cancel test at Creditcard Page
     User Input Cancel
     ${backButtonText} =     Get Text    id:backToDateButton
     Should Be Equal         ${backButtonText}   Back to date selection
+    Unbook all cars if they exist
