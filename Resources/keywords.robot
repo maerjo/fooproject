@@ -86,4 +86,5 @@ User Input Cancel
     Click Button            id:cancel
 
 End Web Test
+    Cancel Reservation
     Close Browser
