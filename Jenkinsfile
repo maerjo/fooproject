@@ -33,7 +33,7 @@ pipeline {
         }
         stage('RobotFramework tests') {
                     steps {
-                        sh 'robot -d results --variable BROWSER:headlesschrome Tests/labb3.robot'
+                        sh 'robot -d results --include DateSelector --variable BROWSER:headlesschrome Tests/labb3.robot'
                     }
                     post {
                         always {

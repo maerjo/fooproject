@@ -20,7 +20,7 @@ ${cvc} =  187
 *** Test Cases ***
 User can access Infotiv Car Rental Service
     [Documentation]         Verfiera att sidan laddas
-    [Tags]                  Test ladda in sida
+    [Tags]                  LoadSite
     Go to Web Page
 
 Select date
