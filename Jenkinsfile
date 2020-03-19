@@ -15,6 +15,10 @@ pipeline {
             steps {
                 sh "mvn test"
             }
+            post {
+                 always {
+                 junit '**/*xml'
+                 }
         }
         stage('API Postman tests using newman') {
             steps {
