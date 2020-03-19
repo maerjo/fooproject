@@ -16,7 +16,7 @@ pipeline {
                 sh "mvn test"
             }
         }
-        stage('newman') {
+        stage('API Postman tests using newman') {
             steps {
                 sh 'newman run Restful_Booker.postman_test_run.json --environment Restful_Booker.postman_environment.json --reporters junit'
             }
@@ -26,7 +26,7 @@ pipeline {
                 }
             }
         }
-        stage('robot') {
+        stage('RobotFramework tests') {
                     steps {
                         sh 'robot -d results --variable BROWSER:headlesschrome Tests/labb3.robot'
                     }
