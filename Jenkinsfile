@@ -19,6 +19,7 @@ pipeline {
                  always {
                  junit '**/*xml'
                  }
+            }
         }
         stage('API Postman tests using newman') {
             steps {
