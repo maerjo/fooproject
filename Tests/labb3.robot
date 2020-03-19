@@ -55,6 +55,7 @@ Length CreditCardNumber
     [Tags]                  creditlength
     Go to Web Page
     Login User
+    Unbook all cars if they exist
     Choose Car
     ${AntalSiffror} =               Get Length  ${kreditkort}
     Log                             ${AntalSiffror}
@@ -66,6 +67,7 @@ Cancel test at Creditcard Page
     [Tags]                  CancelBooking
     Go to Web Page
     Login User
+    Unbook all cars if they exist
     Choose Car
     User Input Cancel
     ${backButtonText} =     Get Text    id:backToDateButton
