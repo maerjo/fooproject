@@ -21,7 +21,12 @@ pipeline {
                  }
             }
         }
-        stage('API Postman tests using newman') {
+        stage('Cobertura code coverage') {
+             steps {
+                sh "mvn cobertura:cobertura"
+             }
+        }
+        stage('API Postman tests using Newman') {
             steps {
                 sh 'newman run Restful_Booker.postman_test_run.json --environment Restful_Booker.postman_environment.json --reporters junit'
             }
