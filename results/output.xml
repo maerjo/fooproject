@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200325 08:32:43.454" rpa="false">
+<suite id="s1" name="Labb3" source="E:\Dropbox\Programmering\Testing\Jenkinslab\fooproject\Tests\labb3.robot">
+<test id="s1-t1" name="Book A Car">
+<kw name="Begin Web Test" library="keywords" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:43.612" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200325 08:32:43.612" endtime="20200325 08:32:48.645"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200325 08:32:48.645" endtime="20200325 08:32:52.757"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:43.612" endtime="20200325 08:32:52.757"></status>
+</kw>
+<kw name="Go to Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:52.758" level="INFO">Opening url 'http://rental21.infotiv.net/'</msg>
+<status status="PASS" starttime="20200325 08:32:52.758" endtime="20200325 08:32:53.059"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:52.758" endtime="20200325 08:32:53.059"></status>
+</kw>
+<kw name="Verify Page Loaded" library="keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:title</arg>
+</arguments>
+<assign>
+<var>${link_text}</var>
+</assign>
+<msg timestamp="20200325 08:32:53.083" level="INFO">${link_text} = Infotiv Car Rental</msg>
+<status status="PASS" starttime="20200325 08:32:53.059" endtime="20200325 08:32:53.083"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${link_text}</arg>
+<arg>Infotiv Car Rental</arg>
+</arguments>
+<status status="PASS" starttime="20200325 08:32:53.083" endtime="20200325 08:32:53.083"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:53.059" endtime="20200325 08:32:53.083"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:52.757" endtime="20200325 08:32:53.083"></status>
+</kw>
+<kw name="Login User" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:email</arg>
+<arg>${epost}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:53.084" level="INFO">Typing text '555@telia.com' into text field 'name:email'.</msg>
+<status status="PASS" starttime="20200325 08:32:53.084" endtime="20200325 08:32:53.162"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Id:password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:53.162" level="INFO">Typing text 'Aa1234' into text field 'Id:password'.</msg>
+<status status="PASS" starttime="20200325 08:32:53.162" endtime="20200325 08:32:53.222"></status>
+</kw>
+<kw name="Click Login" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:login</arg>
+</arguments>
+<msg timestamp="20200325 08:32:53.223" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" starttime="20200325 08:32:53.223" endtime="20200325 08:32:53.771"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:53.222" endtime="20200325 08:32:53.771"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:53.084" endtime="20200325 08:32:53.771"></status>
+</kw>
+<kw name="Choose Car" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[@id="continue"]</arg>
+</arguments>
+<msg timestamp="20200325 08:32:53.772" level="INFO">Clicking button 'xpath://button[@id="continue"]'.</msg>
+<status status="PASS" starttime="20200325 08:32:53.772" endtime="20200325 08:32:54.269"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:bookQ7pass7</arg>
+</arguments>
+<msg timestamp="20200325 08:32:54.269" level="INFO">Clicking button 'id:bookQ7pass7'.</msg>
+<status status="PASS" starttime="20200325 08:32:54.269" endtime="20200325 08:32:54.688"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:53.772" endtime="20200325 08:32:54.688"></status>
+</kw>
+<kw name="User Input" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:cardNum</arg>
+<arg>${kreditkort}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:54.688" level="INFO">Typing text '1234567891011121' into text field 'id:cardNum'.</msg>
+<status status="PASS" starttime="20200325 08:32:54.688" endtime="20200325 08:32:54.750"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:fullName</arg>
+<arg>${namn}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:54.750" level="INFO">Typing text 'Anders Andersson' into text field 'id:fullName'.</msg>
+<status status="PASS" starttime="20200325 08:32:54.750" endtime="20200325 08:32:54.810"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:cvc</arg>
+<arg>${cvc}</arg>
+</arguments>
+<msg timestamp="20200325 08:32:54.811" level="INFO">Typing text '187' into text field 'id:cvc'.</msg>
+<status status="PASS" starttime="20200325 08:32:54.811" endtime="20200325 08:32:54.856"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:confirm</arg>
+</arguments>
+<msg timestamp="20200325 08:32:54.856" level="INFO">Clicking button 'id:confirm'.</msg>
+<status status="PASS" starttime="20200325 08:32:54.856" endtime="20200325 08:32:55.074"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:54.688" endtime="20200325 08:32:55.074"></status>
+</kw>
+<kw name="Cancel Reservation" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:mypage</arg>
+</arguments>
+<msg timestamp="20200325 08:32:55.075" level="INFO">Clicking button 'id:mypage'.</msg>
+<status status="PASS" starttime="20200325 08:32:55.074" endtime="20200325 08:32:55.312"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>id:unBook1</arg>
+</arguments>
+<msg timestamp="20200325 08:32:55.312" level="INFO">Clicking button 'id:unBook1'.</msg>
+<status status="PASS" starttime="20200325 08:32:55.312" endtime="20200325 08:32:55.367"></status>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" starttime="20200325 08:32:55.367" endtime="20200325 08:32:55.370"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:55.074" endtime="20200325 08:32:55.370"></status>
+</kw>
+<kw name="End Web Test" library="keywords" type="teardown">
+<kw name="Unbook all cars if they exist" library="keywords">
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="middlepane"]/table/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${no_of_booked_cars}</var>
+</assign>
+<msg timestamp="20200325 08:32:55.584" level="INFO">${no_of_booked_cars} = 0</msg>
+<status status="PASS" starttime="20200325 08:32:55.371" endtime="20200325 08:32:55.584"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>no_of_booked_cars ${no_of_booked_cars}</arg>
+</arguments>
+<status status="PASS" starttime="20200325 08:32:55.584" endtime="20200325 08:32:55.585"></status>
+</kw>
+<kw name="${iteration} IN RANGE [ 1 | (${no_of_booked_cars}) ]" type="for">
+<status status="PASS" starttime="20200325 08:32:55.585" endtime="20200325 08:32:55.585"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:55.371" endtime="20200325 08:32:55.585"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200325 08:32:55.585" endtime="20200325 08:32:57.624"></status>
+</kw>
+<status status="PASS" starttime="20200325 08:32:55.371" endtime="20200325 08:32:57.624"></status>
+</kw>
+<tags>
+<tag>bokabil</tag>
+</tags>
+<status status="PASS" starttime="20200325 08:32:43.611" endtime="20200325 08:32:57.624" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200325 08:32:43.455" endtime="20200325 08:32:57.625"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">bokabil</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Labb3">Labb3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
